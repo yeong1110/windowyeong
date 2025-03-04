@@ -1,0 +1,20 @@
+@mixin deviceSmall(){
+	@media screen and (max-width:$device_small){
+		@content;
+	}
+}
+@mixin deviceMedium(){
+	@media screen and (max-width:$device_medium){
+		@content;
+	}
+}
+@mixin deviceLarge(){
+	@media screen and (max-width:$device_large){
+		@content;
+	}
+}
+@mixin devicePC(){
+	@media screen and (min-width:$device_large){
+		@content;
+	}
+}
