@@ -5,7 +5,7 @@ const WallPaper = () => {
 	const [date, setDate] = useState(
 		{
 			time: '',
-			second: ''
+			minute: ''
 		}
 	)
 
@@ -13,8 +13,8 @@ const WallPaper = () => {
 		const nowDate = new Date();
 
 		const time = nowDate.getHours();
-		const second = nowDate.getMinutes();
-		setDate({time, second});
+		const minute = nowDate.getMinutes().toString().padStart(2, '0');
+		setDate({time, minute});
 	}
 
 	useEffect(() => {
@@ -27,7 +27,7 @@ const WallPaper = () => {
 			<div></div>
 			<div className="wy__bottom__nav">
 				<button className="wy__bottom__nav__start">START</button>
-				<div className="wy__bottom__nav__time">{date.time}:{date.second}</div>
+				<div className="wy__bottom__nav__time">{date.time}:{date.minute}</div>
 			</div>
 		</div>
 	)
