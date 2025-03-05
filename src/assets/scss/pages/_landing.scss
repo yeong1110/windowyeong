@@ -7,11 +7,10 @@
 	justify-content: center;
 	color: white;
 	box-sizing: border-box;
-	background: url("../images/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
+	background: url("../images/landing/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 2px;
-	cursor: url('../images/cursor.svg'), auto;
-	&--logo{
+	&__logo{
 		@include deviceSmall(){
 			img{
 				width: 80%;
@@ -19,13 +18,13 @@
 			}
 		}
 	}
-	&--progress{
+	&__progress{
 		margin-top: min(166px, 10vh);
 		width: 200px;
 		height: 36px;
 		border: 1px solid #d9d9d9;
 		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-		background-image: url("../images/landing_progress.svg");
+		background-image: url("../images/landing/landing_progress.svg");
 		background-repeat: no-repeat;
 		background-position-y: 6px;
 		animation: runProgress 3s linear infinite;

@@ -18,3 +18,11 @@
 		@content;
 	}
 }
+
+@mixin btnGreen(){
+	background: linear-gradient(90.13deg, rgba(17, 119, 18, 0.36) -0.65%, rgba(34, 173, 51, 0.36) 5.45%, rgba(28, 194, 29, 0.36) 95.76%, rgba(17, 119, 18, 0.36) 101.04%), linear-gradient(360deg, #22AD33 0%, #127C1F 18%, #178B4D 81%, #1CC21D 99.99%, #117712 100%);
+	color: white;
+	border: 1px solid #117712;
+	border-radius: 6px;
+	@content;
+}

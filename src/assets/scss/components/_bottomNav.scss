@@ -1,0 +1,24 @@
+.wy__bottom__nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: grad(basicBlue);
+	border-radius: 8px;
+	&__start{
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 4px 8px;
+
+		width: 120px;
+		height: 100%;
+
+		@include btnGreen;
+	}
+	&__time{
+		color: white;
+		padding-right: 20px;
+	}
+
+}

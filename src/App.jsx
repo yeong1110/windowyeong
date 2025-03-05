@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import './assets/css/style.css'
 import Landing from './pages/Landing.jsx'
+import WallPaper from './pages/WallPaper.jsx'
 
 function App() {
 	const [isLand, setIsLand] = useState(true);
@@ -21,7 +22,7 @@ function App() {
 			}
 			
 			{
-				isLand? <>main</>: ""
+				!isLand? <WallPaper></WallPaper>: ""
 			}
     </>
   )

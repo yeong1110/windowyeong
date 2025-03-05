@@ -21,30 +21,6 @@ body, code {
   line-height: 20px;
 }
 
-.wy__bottom__nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(180deg, #8DB8FF 0%, #005AF2 8.62%, #005AF2 61.01%, #00348C 129.81%);
-  border-radius: 8px;
-}
-.wy__bottom__nav__start {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 8px;
-  width: 120px;
-  height: 100%;
-  background: linear-gradient(90.13deg, rgba(17, 119, 18, 0.36) -0.65%, rgba(34, 173, 51, 0.36) 5.45%, rgba(28, 194, 29, 0.36) 95.76%, rgba(17, 119, 18, 0.36) 101.04%), linear-gradient(360deg, #22AD33 0%, #127C1F 18%, #178B4D 81%, #1CC21D 99.99%, #117712 100%);
-  color: white;
-  border: 1px solid #117712;
-  border-radius: 6px;
-}
-.wy__bottom__nav__time {
-  color: white;
-  padding-right: 20px;
-}
-
 .wy__land {
   height: 100dvh;
   background-color: #111;
@@ -54,23 +30,24 @@ body, code {
   justify-content: center;
   color: white;
   box-sizing: border-box;
-  background: url("../images/landing/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
+  background: url("../images/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  cursor: url("../images/cursor.svg"), auto;
 }
 @media screen and (max-width: 600px) {
-  .wy__land__logo img {
+  .wy__land--logo img {
     width: 80%;
     margin: auto;
   }
 }
-.wy__land__progress {
+.wy__land--progress {
   margin-top: min(166px, 10vh);
   width: 200px;
   height: 36px;
   border: 1px solid #d9d9d9;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: url("../images/landing/landing_progress.svg");
+  background-image: url("../images/landing_progress.svg");
   background-repeat: no-repeat;
   background-position-y: 6px;
   animation: runProgress 3s linear infinite;
@@ -85,10 +62,5 @@ body, code {
 }
 
 .wy__wallpaper {
-  height: 100dvh;
-  display: grid;
-  grid-template-rows: 1fr 40px;
-  background: url("../images/noise.png"), url("../images/land.jpg");
-  background-size: cover;
-  cursor: url("../images/cursor/pointer.svg"), auto;
+  cursor: url("../images/cur28.ani"), auto;
 }
