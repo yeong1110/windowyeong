@@ -1,20 +1,22 @@
+@use "variables";
+
 @mixin deviceSmall(){
-	@media screen and (max-width:$device_small){
+	@media screen and (max-width:variables.$device_small){
 		@content;
 	}
 }
 @mixin deviceMedium(){
-	@media screen and (max-width:$device_medium){
+	@media screen and (max-width:variables.$device_medium){
 		@content;
 	}
 }
 @mixin deviceLarge(){
-	@media screen and (max-width:$device_large){
+	@media screen and (max-width:variables.$device_large){
 		@content;
 	}
 }
 @mixin devicePC(){
-	@media screen and (min-width:$device_large){
+	@media screen and (min-width:variables.$device_large){
 		@content;
 	}
 }

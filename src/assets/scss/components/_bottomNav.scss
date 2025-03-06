@@ -1,8 +1,11 @@
+@use "../variables/funcs";
+@use "../variables/mixins";
+
 .wy__bottom__nav{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: grad(basicBlue);
+	background: funcs.grad(basicBlue);
 	border-radius: 8px;
 	&__start{
 
@@ -14,11 +17,21 @@
 		width: 120px;
 		height: 100%;
 
-		@include btnGreen;
+		@include mixins.btnGreen;
 	}
 	&__time{
 		color: white;
-		padding-right: 20px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 4px 8px;
+		width: 120px;
+		height: 100%;
+		background: linear-gradient(180deg, #5ACAFF 0%, #1599EC 8.62%, #0BAAF3 61.01%, #1E9CF1 129.81%);
+		border: 1px solid #005AF2;
+		border-radius: 6px;
+
 	}
 
 }

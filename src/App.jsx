@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import './assets/css/style.css'
+// import './assets/css/style.css'
+import './assets/scss/style.scss'
 import Landing from './pages/Landing.jsx'
 import WallPaper from './pages/WallPaper.jsx'
 

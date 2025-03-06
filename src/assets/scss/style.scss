@@ -1,15 +1,16 @@
 // variable
-@import "./variables/variable";
-@import "./variables/mixins";
-@import "./variables/funcs";
+@use "variables/variables";
+@use "variables/mixins";
+@use "variables/funcs";
 
 // root assets
-@import "./root/font";
+@use "root/root";
+@use "root/font";
 
 
 // components
-@import "./components/bottomNav";
+@use "components/bottomNav";
 
 
-@import "./pages/landing";
-@import "./pages/wallpaper";
+@use "pages/landing";
+@use "pages/wallpaper";

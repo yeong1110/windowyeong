@@ -1,3 +1,5 @@
+@use "../variables/mixins";
+
 .wy__land{
 	height: 100dvh;
 	background-color: #111;
@@ -11,7 +13,7 @@
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 2px;
 	&__logo{
-		@include deviceSmall(){
+		@include mixins.deviceSmall(){
 			img{
 				width: 80%;
 				margin: auto;
