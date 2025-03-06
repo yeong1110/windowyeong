@@ -1,4 +1,5 @@
 @use "variables";
+@use "funcs";
 
 @mixin deviceSmall(){
 	@media screen and (max-width:variables.$device_small){
@@ -27,4 +28,43 @@
 	border: 1px solid #117712;
 	border-radius: 6px;
 	@content;
+}
+
+@mixin file($size){
+	.wy__drag{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 4px;
+		
+		position: absolute;
+		min-width: 56px;
+		max-width: 75px;
+
+		&__img{
+			width: $size;
+			height: $size;
+			background-size: cover;
+			flex: none;
+			flex-grow: 0;
+			@content;
+		}
+		
+		&__name{
+			width: 56px;
+			max-width: 70px;
+			font-size: 14px;
+			line-height: 1.4;
+			color: #FFFFFF;
+			text-shadow: 0px 0px 2px #000000;
+			flex: none;
+			flex-grow: 0;
+			}
+			&[datatype="exe"]{
+				i{
+					background-image: funcs.file(exe);
+				}
+			}
+		}
 }

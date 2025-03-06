@@ -1,3 +1,6 @@
+@use "../variables/variables";
+@use "../variables/funcs";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,10 +14,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	cursor: url('./assets/images/cursor/cursor.svg'), auto;
+	
+	cursor: funcs.cursor(default);
 	*{
 		box-sizing: border-box;
 	}
+}
+
+#root{
+	width: 100%;
 }
 
 a {
@@ -24,6 +32,7 @@ a {
 }
 a:hover {
   color: #535bf2;
+	cursor: funcs.cursor(pointer);
 }
 
 body {
@@ -47,8 +56,8 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  cursor: pointer;
   transition: border-color 0.25s;
+	cursor: funcs.cursor(pointer);
 }
 button:hover {
   border-color: #646cff;

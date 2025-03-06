@@ -1,0 +1,13 @@
+.wy__cursor{
+	width: 160px; /* 각 프레임 사이즈 */
+  height: 160px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: url('../images/cursor/sprite.png') no-repeat;
+  // background-size: cover;
+  image-rendering: pixelated; /* 픽셀 아트일 때 */
+  transform: translate(-50%, -50%);
+	transition: top, left 0.2s;
+}
