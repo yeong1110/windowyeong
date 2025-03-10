@@ -47,7 +47,7 @@ const CursorPet = () => {
 	
 		const diffX = mouseX - posX;
 		const diffY = mouseY - posY;
-		console.log(`x:${posX} y:${mouseX}`);
+		// console.log(`x:${posX} y:${mouseX}`);
 	
 		if (Math.abs(diffX) > Math.abs(diffY)) {
 			direction = { x: 0 , y: diffX > 0 ? 3 : 2 , distanceX: diffX > 0 ? -50: 50, distanceY: 0 }; // 오른쪽 or 왼쪽

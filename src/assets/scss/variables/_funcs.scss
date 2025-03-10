@@ -19,8 +19,9 @@
 
 @function file($type) {
 	$list: (
-		exe: "../images/icon/14.ico"
+		exe: "../images/icon/14.ico",
+		folder: "../images/icon/19.ico",
 	);
 	$fileType: map.get($list, $type);
-	@return url('#{$fileType}')
+	@return url('#{$fileType}');
 }
