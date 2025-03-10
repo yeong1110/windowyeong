@@ -81,7 +81,8 @@ const DraggableItem = ({dataType, dataName, dataTop, dataLeft}) => {
 		ref={draggable}
 		className="wy__drag" 
 		draggable 
-		datatype={dataType} 
+		datatype={dataType}
+		onMouseDown={(e) => e.stopPropagation()}
 		onDragStart={handleDragStart} 
 		// onDrag={handleDragFile}
 		onDragEnd={handleDragFileEnd} 
