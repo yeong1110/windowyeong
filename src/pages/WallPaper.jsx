@@ -3,6 +3,7 @@ import BottomNav from "../component/BottomNav";
 import CursorPet from "../component/CursorPet";
 import DragCursorArea from "../component/DragCursorArea";
 import DraggableItem from "../component/DraggableItem";
+import AlertPop from "../component/popup/AlertPop";
 
 const WallPaper = () => {
 
@@ -62,7 +63,7 @@ const WallPaper = () => {
             />
         )}
 			</div>
-			<BottomNav></BottomNav><CursorPet></CursorPet>
+			<BottomNav></BottomNav><CursorPet></CursorPet><AlertPop></AlertPop>
 		</div></>
 	)
 }
