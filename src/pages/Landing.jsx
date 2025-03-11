@@ -1,4 +1,4 @@
-import landingLogo from '../assets/images/landing/landing_logo.svg'
+import landingLogo from '/images/landing/landing_logo.svg'
 
 const Landing = () => {
 
