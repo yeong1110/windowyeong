@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Freesentation";
-  src: url("../fonts/Freesentation-6SemiBold.woff2") format("woff2");
+  src: url("/fonts/Freesentation-6SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Freesentation";
-  src: url("../fonts/Freesentation-2ExtraLight.woff2") format("woff2");
+  src: url("/fonts/Freesentation-2ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "DungGeunMo";
-  src: url("../fonts/DungGeunMo.woff2") format("woff2");
+  src: url("/fonts/DungGeunMo.woff2") format("woff2");
 }
 body, code {
   font-family: "DungGeunMo", "Freesentation", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -30,10 +30,10 @@ body, code {
   justify-content: center;
   color: white;
   box-sizing: border-box;
-  background: url("../images/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
+  background: url("/images/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  cursor: url("../images/cursor.svg"), auto;
+  cursor: url("/images/cursor.svg"), auto;
 }
 @media screen and (max-width: 600px) {
   .wy__land--logo img {
@@ -47,7 +47,7 @@ body, code {
   height: 36px;
   border: 1px solid #d9d9d9;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: url("../images/landing_progress.svg");
+  background-image: url("/images/landing_progress.svg");
   background-repeat: no-repeat;
   background-position-y: 6px;
   animation: runProgress 3s linear infinite;
@@ -62,5 +62,5 @@ body, code {
 }
 
 .wy__wallpaper {
-  cursor: url("../images/cur28.ani"), auto;
+  cursor: url("/images/cur28.ani"), auto;
 }

@@ -2,8 +2,8 @@
 
 @function cursor($type) {
 	$typeList: ( 
-		default: "../images/cursor/cursor.svg",
-		pointer: "../images/cursor/pointer.svg",
+		default: "/images/cursor/cursor.svg",
+		pointer: "/images/cursor/pointer.svg",
 		);
 	$cursorType: map.get($typeList, $type);
 	@return url('#{$cursorType}'), auto;
@@ -19,8 +19,9 @@
 
 @function file($type) {
 	$list: (
-		exe: "../images/icon/14.ico",
-		folder: "../images/icon/19.ico",
+		exe: "/images/icon/14.ico",
+		folder: "/images/icon/19.ico",
+		folioPop: "/images/icon/1484.ico",
 	);
 	$fileType: map.get($list, $type);
 	@return url('#{$fileType}');
