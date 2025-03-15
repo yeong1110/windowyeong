@@ -1,33 +1,26 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-// import './assets/scss/style.scss'
-// import Landing from '../../src/pages/Landing.jsx'
-// import WallPaper from '../../src/pages/WallPaper.jsx'
+import Landing from './pages/Landing.tsx'
+import WallPaper from './pages/WallPaper.tsx'
 
 function App() {
-	const [isLand, setIsLand] = useState(true);
+	const [isLand, setIsLand] = useState<any>(true);
 
 	const runLanding = () => {
-		setIsLand(false)
+		setIsLand(false);
 	}
 
 	useEffect(()=>{
-		window.setTimeout(runLanding, 6000);
+		setTimeout(runLanding, 6000);
 	},[])
 
   return (
-		<>
-		hello world</>
-    // <>
-		// 	{
-		// 		isLand? <Landing></Landing> : ""
-		// 	}
-			
-		// 	{
-		// 		!isLand? <WallPaper></WallPaper>: ""
-		// 	}
-    // </>
+    <>
+			{
+				isLand? <Landing></Landing> : <WallPaper></WallPaper>
+			}
+    </>
   )
 }
 

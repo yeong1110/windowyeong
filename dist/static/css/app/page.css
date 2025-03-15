@@ -1,3 +1,70 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/assets/css/reset.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+	background: none;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./src/assets/scss/style.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -104,6 +171,7 @@ body, code {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   pointer-events: none;
   background: url("/images/cursor/sprite.png") no-repeat;
   image-rendering: pixelated; /* 픽셀 아트일 때 */
@@ -118,6 +186,32 @@ body, code {
   background: linear-gradient(180deg, #8DB8FF 0%, #005AF2 8.62%, #005AF2 61.01%, #00348C 129.81%);
   border-radius: 8px;
 }
+.wy__bottom__nav i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  flex: none;
+  flex-grow: 0;
+}
+.wy__bottom__nav i[datatype=exe] {
+  background-image: url("/images/icon/14.ico");
+}
+.wy__bottom__nav i[datatype=folder] {
+  background-image: url("/images/icon/19.ico");
+}
+.wy__bottom__nav i[datatype=folioPop] {
+  background-image: url("/images/icon/1484.ico");
+}
+.wy__bottom__nav[datatype=exe] i {
+  background-image: url("/images/icon/14.ico");
+}
+.wy__bottom__nav[datatype=folder] i {
+  background-image: url("/images/icon/19.ico");
+}
+.wy__bottom__nav[datatype=folioPop] i {
+  background-image: url("/images/icon/1484.ico");
+}
 .wy__bottom__nav__start {
   display: flex;
   justify-content: center;
@@ -129,6 +223,12 @@ body, code {
   color: white;
   border: 1px solid #117712;
   border-radius: 6px;
+}
+.wy__bottom__nav__icon {
+  padding: 0 24px;
+  flex: 1 1;
+  display: flex;
+  justify-content: start;
 }
 .wy__bottom__nav__time {
   color: white;
@@ -177,12 +277,32 @@ body, code {
 .wy__desktop .wy__drag[datatype=folder] i {
   background-image: url("/images/icon/19.ico");
 }
+.wy__desktop .wy__drag[datatype=folioPop] i {
+  background-image: url("/images/icon/1484.ico");
+}
 .wy__desktop .wy__drag.click {
   background-color: #a0c5e8;
   opacity: 0.8;
 }
 
+.wy__desktop {
+  position: relative;
+}
+
 .wy__pop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #00348C;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25));
+  border-radius: 6px 6px 0px 0px;
+}
+.wy__pop__alert {
   position: absolute;
   width: 466px;
   height: 172px;
@@ -250,20 +370,19 @@ body, code {
   background-repeat: no-repeat;
   background-position: center;
 }
-.wy__pop__container {
+.wy__pop__alert__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 20px;
   gap: 24px;
   background: #ECE9D8;
   border: 2px solid #005AF2;
 }
-.wy__pop__container i {
+.wy__pop__alert__container i {
   flex-shrink: 0;
 }
-.wy__pop__container i.alert {
+.wy__pop__alert__container i.alert {
   display: block;
   background-image: url("/images/popup/alert.svg");
   width: 34px;
@@ -271,7 +390,21 @@ body, code {
   background-position: center/contain;
   background-repeat: no-repeat;
 }
+.wy__pop__container {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  border: 2px solid #005AF2;
+}
+.wy__pop__alert__content {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
 .wy__pop__content {
+  height: 100%;
   display: flex;
   align-items: start;
   gap: 12px;

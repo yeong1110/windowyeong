@@ -7,6 +7,7 @@
 	align-items: center;
 	background: funcs.grad(basicBlue);
 	border-radius: 8px;
+	@include mixins.icon(24px);
 	&__start{
 
 		display: flex;
@@ -18,6 +19,12 @@
 		height: 100%;
 
 		@include mixins.btnGreen;
+	}
+	&__icon{
+		padding: 0 24px;
+		flex: 1;
+		display: flex;
+		justify-content: start;
 	}
 	&__time{
 		color: white;

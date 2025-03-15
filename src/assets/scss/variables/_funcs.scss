@@ -21,6 +21,7 @@
 	$list: (
 		exe: "/images/icon/14.ico",
 		folder: "/images/icon/19.ico",
+		folioPop: "/images/icon/1484.ico",
 	);
 	$fileType: map.get($list, $type);
 	@return url('#{$fileType}');
