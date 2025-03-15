@@ -72,9 +72,50 @@
 					background-image: funcs.file(folder);
 				}
 			}
+			&[datatype="folioPop"]{
+				i{
+					background-image: funcs.file(folioPop);
+				}
+			}
 			&.click{
 				background-color: #a0c5e8;
 				opacity: 0.8;
 			}
 		}
+}
+
+@mixin icon($size){
+	i{
+		display: block;
+		width: $size;
+		height: $size;
+		background-size: cover;
+		flex: none;
+		flex-grow: 0;
+		&[datatype="exe"]{
+			background-image: funcs.file(exe);
+		}
+		&[datatype="folder"]{
+			background-image: funcs.file(folder);
+		}
+		&[datatype="folioPop"]{
+			background-image: funcs.file(folioPop);
+		}
+		@content;
+	}
+	&[datatype="exe"]{
+		i{
+			background-image: funcs.file(exe);
+		}
+	}
+	&[datatype="folder"]{
+		i{
+			background-image: funcs.file(folder);
+		}
+	}
+	&[datatype="folioPop"]{
+		i{
+			background-image: funcs.file(folioPop);
+		}
+	}
 }
