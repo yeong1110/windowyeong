@@ -1,8 +1,7 @@
 'use client'
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import BottomNav from "../component/BottomNav";
 import CursorPet from "../component/CursorPet";
-import DragCursorArea from "../component/DragCursorArea";
 import DraggableItem from "../component/DraggableItem";
 import { DraggableItemType } from "../comm/enums";
 import AlertPop from "../component/popup/AlertPop";
@@ -16,7 +15,6 @@ const WallPaper = () => {
 
 	const [isSelecting, setIsSelecting] = useState<any>(false);
 	const [selectionBox, setSelectionBox] = useState<any>(null);
-	const [selectedItems, setSelectedItems] = useState([]);
 	const [activePopup, setActivePopup] = useState<any>(null);
 	const [activefile, setActiveFile] = useState<ActiveFile>({
 		pet: null,
@@ -67,7 +65,7 @@ const WallPaper = () => {
 	]
 
 
-	const handleDoubleClick = ({dataType, dataName, clickFunc}) => () => {
+	const handleDoubleClick = ({dataType, dataName, clickFunc}: any) => () => {
 		const handleClosePop = () => {
 			setActivePopup(null);
 			setIconState({type: null});
@@ -81,7 +79,7 @@ const WallPaper = () => {
       );
     } if (dataType === "folioPop") {
       setActivePopup(
-				<WindowPop dataType={dataType} title={dataName} onClickClose={handleClosePop}>
+				<WindowPop datatype={dataType} title={dataName} onClickClose={handleClosePop}>
 					<iframe src="https://yeong1110.github.io/i-make/" style={{
 						width : "100%",
 						height: "100%"

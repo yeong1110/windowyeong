@@ -13,7 +13,13 @@ export default function RootLayout({
   return (
     <html lang="ko">
 			<head>
-			<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+				<link rel="icon" href="/favicon.ico" sizes="any" />
+				<link
+					rel="apple-touch-icon"
+					href="/apple-icon?<generated>"
+					type="image/<generated>"
+					sizes="<generated>"
+				/>
 			</head>
       <body>
         <div id="root">{children}</div>

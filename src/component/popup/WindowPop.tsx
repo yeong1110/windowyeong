@@ -1,9 +1,9 @@
-const WindowPop = ({type, title, onClickClose, children}) => {
+const WindowPop = ({type, title, onClickClose, children}: any) => {
 
 	return(
 		<div className="wy__pop">
 			<div className="wy__pop__head">
-				<i dataType={dataType}></i>
+				<i datatype={type}></i>
 				<p>{title}</p>
 				<ul className="wy__pop__head__btn">
 					<li><button className="maximize">close</button></li>

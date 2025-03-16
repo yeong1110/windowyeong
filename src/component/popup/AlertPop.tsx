@@ -1,15 +1,11 @@
-const AlertPop = ({title, click, onClickClose, content}) => {
+const AlertPop = ({title, click, onClickClose, content}: any) => {
 
 	return(
 		<div className="wy__pop__alert">
 			<div className="wy__pop__head">
-				{/* <i></i> */}
 				<p>{title}</p>
 				<ul className="wy__pop__head__btn">
 					<li><button className="close" onClick={()=> onClickClose(true)}>close</button></li>
-					{/* <li><button className="maximize">close</button></li>
-					<li><button className="minimize">close</button></li>
-					<li><button className="restore">close</button></li> */}
 				</ul>
 			</div>
 			<div className="wy__pop__alert__container">
@@ -17,9 +13,9 @@ const AlertPop = ({title, click, onClickClose, content}) => {
 					<i className="alert"></i>
 					<div>
 						{
-							content.map(text => {
+							content.map((text:string, i:number) => {
 								return(
-									<p>{text}</p>
+									<p key={i}>{text}</p>
 								)
 							})
 						}

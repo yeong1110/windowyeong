@@ -1,9 +1,5 @@
 'use client'
 import React, { useState } from "react";
-import AlertPop from "./popup/AlertPop";
-import { DraggableItemType } from "../comm/enums";
-import CursorPet from "./CursorPet";
-
 const DraggableItem: React.FunctionComponent<any> = ({data, onDoubleClick}) => {
 
 	let xOffset = 0;
@@ -14,7 +10,6 @@ const DraggableItem: React.FunctionComponent<any> = ({data, onDoubleClick}) => {
 		left: data.dataLeft
 	})
 
-	const [activePopup, setActivePopup] = useState<any>(null);
 
 	const handleDragOver = (e : any) => {
 		e.preventDefault(); // 기본 동작 방지 (🚫 커서 방지)
@@ -26,17 +21,6 @@ const DraggableItem: React.FunctionComponent<any> = ({data, onDoubleClick}) => {
 		e.dataTransfer.setData("text/plain", "dummy");
 		e.dataTransfer.dropEffect = "move"
 	};
-
-	const handleDragFile = (e : any) => {
-		e.preventDefault();
-
-		const initialX = e.clientX - xOffset;
-		const initialY = e.clientY - yOffset;
-		setfileDirection({
-			top: initialY,
-			left: initialX,
-		})
-	}
 
 	const handleDragFileEnd = (e : any) => {
 		e.preventDefault();
@@ -83,8 +67,7 @@ const DraggableItem: React.FunctionComponent<any> = ({data, onDoubleClick}) => {
 		draggable 
 		datatype={data.dataType}
 		onMouseDown={(e) => e.stopPropagation()}
-		onDragStart={handleDragStart} 
-		// onDrag={handleDragFile}
+		onDragStart={handleDragStart}
 		onDragEnd={handleDragFileEnd} 
 		onTouchMove={handleTouchFile}
 		onDragOver={handleDragOver}
