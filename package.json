@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-		"deploy": "next build && touch dist/.nojekyll && git add -f dist/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+		"deploy": "next build && touch dist/.nojekyll && git add -f dist/ && git commit -m \"Deploy\" && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "next": "^15.2.1",
