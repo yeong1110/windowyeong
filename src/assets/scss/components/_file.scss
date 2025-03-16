@@ -1,9 +1,0 @@
-@use "../variables/mixins";
-@use "../variables/funcs";
-
-.wy__desktop{
-	@include mixins.file(48px){
-		// background-image: funcs.file(exe);
-	};
-	
-}
