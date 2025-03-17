@@ -1,0 +1,11 @@
+.wy__introduce{
+	position: absolute;
+	bottom: 2vw;
+	right: 2vw;
+	width: clamp(14em, 10vw, 20vw);
+	padding: 4px;
+	background-color: #ECE9D8;
+	border: 1px solid #000;
+	text-wrap: balance;
+	word-break: break-all;
+}
