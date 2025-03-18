@@ -451,12 +451,45 @@ body, code {
   position: absolute;
   bottom: 2vw;
   right: 2vw;
-  width: clamp(14em, 10vw, 20vw);
-  padding: 4px;
-  background-color: #ECE9D8;
-  border: 1px solid #000;
   text-wrap: balance;
   word-break: break-all;
+}
+.wy__introduce__inner {
+  width: clamp(14em, 10vw, 20vw);
+  background-color: #ECE9D8;
+  border: 1px solid #000;
+  padding: 4px;
+}
+.wy__introduce button {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: max(26px, 2vw);
+  height: max(26px, 2vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.wy__introduce button::after {
+  display: flex;
+  content: "x";
+  font-size: max(26px, 2vw);
+  text-indent: 0;
+}
+.wy__introduce button.active {
+  position: relative;
+  inset: 0;
+  width: min(50px, 8vw);
+  height: min(50px, 8vw);
+  background-color: #ECE9D8;
+  border: 1px solid #000;
+}
+.wy__introduce button.active::after {
+  font-size: min(50px, 8vw);
+  content: "?";
 }
 
 .wy__land {
