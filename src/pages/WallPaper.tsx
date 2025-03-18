@@ -17,6 +17,7 @@ const WallPaper = () => {
   const [isSelecting, setIsSelecting] = useState<any>(false);
   const [selectionBox, setSelectionBox] = useState<any>(null);
   const [activePopup, setActivePopup] = useState<any>(null);
+  const [savePopupData, setsavePopup] = useState<any>(null);
   const [activefile, setActiveFile] = useState<ActiveFile>({
     pet: null,
   });
@@ -58,17 +59,16 @@ const WallPaper = () => {
     });
   };
 
-  const savePopup = (popupData: any) => {
-    setActivePopup(popupData);
+  const activeMinimize = () => {
+    setActivePopup(null)
   };
 
-  const activeMinimize = () => {
-    activePopup === null
-      ? setActivePopup((prev: any) => {
-          return prev;
-        })
-      : setActivePopup(null);
-  };
+  const activeRestore = () => {
+    // console.log(activePopup)
+    activePopup !== null?
+    setActivePopup(null)
+    : setActivePopup(savePopupData);
+  }
 
   const desktopData = [
     {
@@ -146,7 +146,21 @@ const WallPaper = () => {
             ></Introduce>
           </WindowPop>
         );
-        savePopup;
+        setsavePopup(
+          <WindowPop
+            datatype={dataType}
+            title={dataName}
+            onClickClose={handleClosePop}
+            minimize={clickFunc}
+          >
+            <Frame src={depth.link}></Frame>
+            <Introduce
+              subject={depth.subject}
+              date={depth.date}
+              skill={depth.skill}
+            ></Introduce>
+          </WindowPop>
+        );
       }
     };
 
@@ -190,7 +204,7 @@ const WallPaper = () => {
         )} */}
         {activePopup}
       </div>
-      <BottomNav dataType={iconState.type}></BottomNav>
+      <BottomNav dataType={iconState.type} func={activeRestore}></BottomNav>
       {activefile.pet}
     </div>
   );
