@@ -58,6 +58,18 @@ const WallPaper = () => {
     });
   };
 
+  const savePopup = (popupData: any) => {
+    setActivePopup(popupData);
+  };
+
+  const activeMinimize = () => {
+    activePopup === null
+      ? setActivePopup((prev: any) => {
+          return prev;
+        })
+      : setActivePopup(null);
+  };
+
   const desktopData = [
     {
       id: 1,
@@ -73,7 +85,7 @@ const WallPaper = () => {
       dataName: "포트폴리오",
       dataTop: "50%",
       dataLeft: "20%",
-      clickFunc: () => {},
+      clickFunc: activeMinimize,
       depth: {
         link: "https://yeong1110.github.io/i-make/",
         subject: "포트폴리오",
@@ -87,8 +99,8 @@ const WallPaper = () => {
       dataName: "보카박스",
       dataTop: "20%",
       dataLeft: "20%",
-      clickFunc: () => {},
-			depth: {
+      clickFunc: activeMinimize,
+      depth: {
         link: "https://vocabox.kro.kr",
         subject: "보카박스",
         date: "2023~",
@@ -124,11 +136,17 @@ const WallPaper = () => {
             datatype={dataType}
             title={dataName}
             onClickClose={handleClosePop}
+            minimize={clickFunc}
           >
             <Frame src={depth.link}></Frame>
-						<Introduce subject={depth.subject} date={depth.date} skill={depth.skill}></Introduce>
+            <Introduce
+              subject={depth.subject}
+              date={depth.date}
+              skill={depth.skill}
+            ></Introduce>
           </WindowPop>
         );
+        savePopup;
       }
     };
 
@@ -156,7 +174,7 @@ const WallPaper = () => {
           );
         })}
 
-        {selectionBox && (
+        {/* {selectionBox && (
           <div
             style={{
               position: "fixed",
@@ -169,7 +187,7 @@ const WallPaper = () => {
               border: "1px solid #0d99ff",
             }}
           ></div>
-        )}
+        )} */}
         {activePopup}
       </div>
       <BottomNav dataType={iconState.type}></BottomNav>
