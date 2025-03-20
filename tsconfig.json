@@ -31,6 +31,9 @@
     "paths": {
       "@images/*": [
         "./public/images/*"
+      ],
+      "@mvs/*": [
+        "./public/mvs/*"
       ]
     }
   },

@@ -287,6 +287,123 @@ body, code {
   opacity: 0.8;
 }
 
+.wy__nav__full {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+.wy__nav {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: min(466px, 94vw);
+  height: clamp(60vh, 80vh, 612px);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #00348c;
+  box-shadow: inset -2px 4px 4px #00348c;
+  border-radius: 6px 6px 0px 0px;
+}
+.wy__nav__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: linear-gradient(180deg, #8db8ff 0%, #0d60cc 8.34%, #1b71d4 35.28%, #4191ea 92.61%);
+  color: #fff;
+}
+.wy__nav__head__name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.wy__nav__head__name > div {
+  width: min(50px, 8vw);
+  height: min(50px, 8vw);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #fff;
+}
+.wy__nav__head__name > div img {
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+.wy__nav__content {
+  flex: 1 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+}
+@media screen and (max-width: 600px) {
+  .wy__nav__content {
+    grid-auto-flow: row;
+  }
+}
+.wy__nav__content > div {
+  padding: 10px;
+}
+.wy__nav__career__title {
+  font-size: clamp(20px, 4vw, 24px);
+  color: #005af2;
+  margin-top: 24px;
+}
+.wy__nav__career__title:first-of-type {
+  margin-top: 0;
+}
+.wy__nav__career__items {
+  margin-top: 10px;
+}
+.wy__nav__career__items li {
+  font-size: clamp(14px, 4vw, 16px);
+}
+.wy__nav__project {
+  background-color: #d3e5fb;
+}
+.wy__nav__project__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wy__nav__project__items li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: url("/windowyeong/images/cursor/pointer.svg"), auto;
+}
+.wy__nav__project__items li i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  flex: none;
+  flex-grow: 0;
+}
+.wy__nav__project__items li i[datatype=exe] {
+  background-image: url("/windowyeong/images/icon/14.ico");
+}
+.wy__nav__project__items li i[datatype=folder] {
+  background-image: url("/windowyeong/images/icon/19.ico");
+}
+.wy__nav__project__items li i[datatype=folioPop] {
+  background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__nav__project__items li[datatype=exe] i {
+  background-image: url("/windowyeong/images/icon/14.ico");
+}
+.wy__nav__project__items li[datatype=folder] i {
+  background-image: url("/windowyeong/images/icon/19.ico");
+}
+.wy__nav__project__items li[datatype=folioPop] i {
+  background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__nav__project__items li i {
+  background: url("/windowyeong/images/icon/1484.ico") center/contain no-repeat;
+}
+
 .wy__desktop {
   position: relative;
 }
