@@ -116,13 +116,23 @@ h1 {
   line-height: 1.1;
 }
 
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  -moz-appearance: none;
+       appearance: none;
+  font-family: inherit;
+  color: inherit;
+  border-radius: 0;
+}
+
 button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: clamp(14px, 0.825rem, 2vw);
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   transition: border-color 0.25s;
   cursor: url("/windowyeong/images/cursor/pointer.svg"), auto;
 }
@@ -130,6 +140,24 @@ button {
 button:focus,
 button:focus-visible {
   outline: none;
+}
+
+input,
+textarea {
+  display: block;
+  padding: 9px 12px;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-width: 1px 0px 0px 1px;
+  border-style: solid;
+  border-color: #000000;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+textarea {
+  resize: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -205,6 +233,9 @@ body, code {
 .wy__bottom__nav i[datatype=folioPop] {
   background-image: url("/windowyeong/images/icon/1484.ico");
 }
+.wy__bottom__nav i[datatype=mail] {
+  background-image: url("/windowyeong/images/icon/letter.png");
+}
 .wy__bottom__nav[datatype=exe] i {
   background-image: url("/windowyeong/images/icon/14.ico");
 }
@@ -214,6 +245,9 @@ body, code {
 .wy__bottom__nav[datatype=folioPop] i {
   background-image: url("/windowyeong/images/icon/1484.ico");
 }
+.wy__bottom__nav[datatype=mail] i {
+  background-image: url("/windowyeong/images/icon/letter.png");
+}
 .wy__bottom__nav__start {
   display: flex;
   justify-content: center;
@@ -221,7 +255,7 @@ body, code {
   padding: 4px 8px;
   width: 120px;
   height: 100%;
-  background: linear-gradient(90.13deg, rgba(17, 119, 18, 0.36) -0.65%, rgba(34, 173, 51, 0.36) 5.45%, rgba(28, 194, 29, 0.36) 95.76%, rgba(17, 119, 18, 0.36) 101.04%), linear-gradient(360deg, #22AD33 0%, #127C1F 18%, #178B4D 81%, #1CC21D 99.99%, #117712 100%);
+  background: linear-gradient(90.13deg, rgba(17, 119, 18, 0.36) -0.65%, rgba(34, 173, 51, 0.36) 5.45%, rgba(28, 194, 29, 0.36) 95.76%, rgba(17, 119, 18, 0.36) 101.04%), linear-gradient(360deg, #22ad33 0%, #127c1f 18%, #178b4d 81%, #1cc21d 99.99%, #117712 100%);
   color: white;
   border: 1px solid #117712;
   border-radius: 6px;
@@ -268,7 +302,7 @@ body, code {
   max-width: 70px;
   font-size: 14px;
   line-height: 1.4;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 0px 2px #000000;
   flex: none;
   flex-grow: 0;
@@ -281,6 +315,9 @@ body, code {
 }
 .wy__desktop .wy__drag[datatype=folioPop] i {
   background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__desktop .wy__drag[datatype=mail] i {
+  background-image: url("/windowyeong/images/icon/letter.png");
 }
 .wy__desktop .wy__drag.click {
   background-color: #a0c5e8;
@@ -391,6 +428,9 @@ body, code {
 .wy__nav__project__items li i[datatype=folioPop] {
   background-image: url("/windowyeong/images/icon/1484.ico");
 }
+.wy__nav__project__items li i[datatype=mail] {
+  background-image: url("/windowyeong/images/icon/letter.png");
+}
 .wy__nav__project__items li[datatype=exe] i {
   background-image: url("/windowyeong/images/icon/14.ico");
 }
@@ -399,6 +439,9 @@ body, code {
 }
 .wy__nav__project__items li[datatype=folioPop] i {
   background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__nav__project__items li[datatype=mail] i {
+  background-image: url("/windowyeong/images/icon/letter.png");
 }
 .wy__nav__project__items li i {
   background: url("/windowyeong/images/icon/1484.ico") center/contain no-repeat;
@@ -485,11 +528,13 @@ body, code {
   justify-content: center;
   background: #fff;
   border: 2px solid #005af2;
+  overflow: hidden;
 }
 .wy__pop__content {
   height: 100%;
   display: flex;
   align-items: start;
+  justify-content: center;
   gap: 12px;
 }
 .wy__pop__btn {
@@ -607,6 +652,86 @@ body, code {
 .wy__introduce button.active::after {
   font-size: min(50px, 8vw);
   content: "?";
+}
+
+.wy__visit {
+  padding: 8px 10px 40px 10px;
+  width: 100%;
+  max-width: 768px;
+  height: 100%;
+  overflow-y: auto;
+}
+.wy__visit__write {
+  padding: 8px 16px;
+  background: #e6e5e5;
+  border-width: 1px 0px 0px 1px;
+  border-style: solid;
+  border-color: #ffffff;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+.wy__visit__input__wrap {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 26px;
+}
+.wy__visit__input__wrap input {
+  width: 100px;
+}
+.wy__visit__textarea__wrap {
+  margin-top: 9px;
+  height: clamp(84px, 20vh, 120px);
+}
+.wy__visit__button__wrap {
+  margin-top: 11px;
+  display: flex;
+  justify-content: center;
+}
+.wy__visit__button__wrap button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  width: 78px;
+  height: 24px;
+  background: #eee7d9;
+  border: 1px solid #243438;
+  box-shadow: inset -3px -3px 2px rgba(0, 0, 0, 0.32);
+}
+.wy__visit__button__wrap button:focus, .wy__visit__button__wrap button:focus-visible {
+  border: 1px solid #243438;
+}
+.wy__visit__button__wrap button:focus::before, .wy__visit__button__wrap button:focus-visible::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 68%;
+  border: 1px dashed #706d67;
+}
+.wy__visit__lists {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.wy__visit__list {
+  border-top: 1px solid #000000;
+}
+.wy__visit__list > div {
+  padding: 10px;
+}
+.wy__visit__list__top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #E6E5E5;
+}
+.wy__visit__list__bottom {
+  background-color: #F5F5F5;
 }
 
 .wy__land {

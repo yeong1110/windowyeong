@@ -8,16 +8,19 @@ import AlertPop from "../component/popup/AlertPop";
 import WindowPop from "../component/popup/WindowPop";
 import Frame from "../component/popup/Frame";
 import Introduce from "../component/popup/Introduce";
+import Visit from "./Visit";
 
 const WallPaper = () => {
   interface ActiveFile {
     pet: React.ReactNode | null;
+    mail: React.ReactNode | null;
   }
 
   const [activePopup, setActivePopup] = useState<any>(null);
   const [savePopupData, setsavePopup] = useState<any>(null);
   const [activefile, setActiveFile] = useState<ActiveFile>({
     pet: null,
+    mail: null,
   });
   const [iconState, setIconState] = useState<any>({
     type: "",
@@ -26,7 +29,16 @@ const WallPaper = () => {
   const activePet = () => {
     setActivePopup(null);
     setActiveFile({
+      ...activefile,
       pet: <CursorPet />,
+    });
+  };
+
+  const activeMail = () => {
+    setActivePopup(null);
+    setActiveFile({
+      ...activefile,
+      mail: <Visit />,
     });
   };
 
@@ -76,6 +88,20 @@ const WallPaper = () => {
         skill: "React, SCSS",
       },
     },
+    {
+      id: 4,
+      dataType: DraggableItemType.mail,
+      dataName: "방명록",
+      dataTop: "10%",
+      dataLeft: "10%",
+      clickFunc: activeMail,
+      // depth: {
+      //   link: "https://vocabox.kro.kr",
+      //   subject: "보카박스",
+      //   date: "2023~",
+      //   skill: "React, SCSS",
+      // },
+    },
   ];
 
   const handleDoubleClick = useCallback((data: any) => {
@@ -117,6 +143,19 @@ const WallPaper = () => {
 
       setActivePopup(newPopup);
       setsavePopup(newPopup);
+    } else if (data.dataType === "mail") {
+      const newPopup = (
+        <WindowPop
+          datatype={data.dataType}
+          title={data.dataName}
+          onClickClose={handleClosePop}
+          minimize={data.clickFunc}
+        >
+          <Visit />
+        </WindowPop>
+      );
+      setActivePopup(newPopup);
+      setsavePopup(newPopup);
     }
   }, []);
 
@@ -145,6 +184,7 @@ const WallPaper = () => {
         handleClick={handleDoubleClick}
       ></BottomNav>
       {activefile.pet}
+      {activefile.mail}
     </div>
   );
 };

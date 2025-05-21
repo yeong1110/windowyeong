@@ -22,6 +22,7 @@
 		exe: "/windowyeong/images/icon/14.ico",
 		folder: "/windowyeong/images/icon/19.ico",
 		folioPop: "/windowyeong/images/icon/1484.ico",
+		mail: "/windowyeong/images/icon/letter.png",
 	);
 	$fileType: map.get($list, $type);
 	@return url('#{$fileType}');
