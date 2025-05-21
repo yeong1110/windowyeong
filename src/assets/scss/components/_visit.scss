@@ -1,0 +1,59 @@
+@use "../variables/mixins";
+
+.wy__visit {
+  padding: 8px 10px 40px 10px;
+	width: 100%;
+  max-width: 768px;
+	height: 100%;
+	overflow-y: auto;
+
+  &__write {
+    padding: 8px 16px;
+    background: #e6e5e5;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #ffffff;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.25);
+  }
+  &__input__wrap {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    height: 26px;
+    input {
+      width: 100px;
+    }
+  }
+  &__textarea__wrap {
+    margin-top: 9px;
+    height: clamp(84px, 20vh, 120px);
+  }
+  &__button__wrap {
+    margin-top: 11px;
+    display: flex;
+    justify-content: center;
+    button {
+      @include mixins.button(78px);
+    }
+  }
+  &__lists {
+		margin-top: 28px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+  }
+  &__list {
+		border-top: 1px solid #000000;
+		> div {
+			padding: 10px;
+		}
+  }
+  &__list__top {
+		display: flex;
+		justify-content: space-between;
+		background-color: #E6E5E5;
+  }
+  &__list__bottom {
+		background-color: #F5F5F5;
+  }
+}

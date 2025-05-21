@@ -28,6 +28,7 @@ const WindowPop = ({ type, title, onClickClose, minimize, children }: any) => {
   };
 
   const handleDragStart = (e: any) => {
+    console.log(e);
     // 투명 이미지 설정
     e.dataTransfer.setData("text/plain", "dummy");
     const img = new Image();
@@ -52,11 +53,7 @@ const WindowPop = ({ type, title, onClickClose, minimize, children }: any) => {
 
   return (
     <div
-      draggable
       className="wy__pop"
-      onDragStart={handleDragStart}
-      onDrag={handleDragWindowEnd}
-      onDragEnd={handleDragWindowEnd}
       style={{
         width: windowState.width,
         height: windowState.height,
@@ -64,7 +61,13 @@ const WindowPop = ({ type, title, onClickClose, minimize, children }: any) => {
         left: windowState.left,
       }}
     >
-      <div className="wy__pop__head">
+      <div
+        draggable
+        className="wy__pop__head"
+        onDragStart={handleDragStart}
+        onDrag={handleDragWindowEnd}
+        onDragEnd={handleDragWindowEnd}
+      >
         <i datatype={type}></i>
         <p>{title}</p>
         <ul className="wy__pop__head__btn">

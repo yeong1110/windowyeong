@@ -7,9 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-		"deploy": "next build && touch dist/.nojekyll && git add -f dist/ && git commit -m \"Deploy\" && git subtree push --prefix dist origin gh-pages"
+    "deploy": "next build && touch dist/.nojekyll && git add -f dist/ && git commit -m \"Deploy\" && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "firebase": "^11.7.3",
     "next": "^15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

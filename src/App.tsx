@@ -12,7 +12,7 @@ function App() {
 	}
 
 	useEffect(()=>{
-		setTimeout(runLanding, 6000);
+		setTimeout(runLanding, 1000);
 	},[])
 
   return (

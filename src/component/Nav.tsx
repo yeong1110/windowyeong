@@ -13,8 +13,8 @@ const Nav: React.FunctionComponent<any> = ({
       name: "데싱디바",
       clickFunc: handleMinimize,
       depth: {
-        link: "@mvs/diva.mp4",
-        subject: "데싱디바",
+        link: "https://yeong1110.github.io/windowyeong/mvs/diva.mp4",
+        subject: "프로모션 종료",
         date: "2024.03",
         skill: "HTML,SCSS,JS",
       },
@@ -61,8 +61,8 @@ const Nav: React.FunctionComponent<any> = ({
       name: "롯데렌터카",
       clickFunc: handleMinimize,
       depth: {
-        link: "https://yeong1110.github.io/i-make/",
-        subject: "롯데렌터카",
+        link: "https://embed.figma.com/design/UGNlF3lN20ZKLqLc0Yx1ar/%EB%A1%AF%EB%8D%B0-%EB%A0%8C%EB%8D%94%EC%B9%B4?node-id=277-11419&embed-host=share",
+        subject: "보안문제로 링크가 존재하지 않음",
         date: "2024.08",
         skill: "HTML,SCSS,tailwind,JS",
       },
