@@ -1,0 +1,40 @@
+.wy__pop__alert{
+	position: absolute;
+	width: min(466px, 70vw);
+	display: flex;
+	flex-direction: column;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	border: 1px solid #00348c;
+	filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25));
+	border-radius: 6px 6px 0px 0px;
+	&__container {
+		height: 100%;
+		flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 24px;
+    background: #ece9d8;
+    border: 2px solid #005af2;
+    i {
+      flex-shrink: 0;
+      &.alert {
+        display: block;
+        background-image: url("/windowyeong/images/popup/alert.svg");
+        width: 34px;
+        height: 36px;
+        background-position: center / contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+	&__content {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+  }
+}

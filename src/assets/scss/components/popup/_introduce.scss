@@ -1,0 +1,45 @@
+.wy__introduce{
+	position: absolute;
+	bottom: 2vw;
+	right: 2vw;
+	text-wrap: balance;
+	word-break: break-all;
+	&__inner{
+		width: clamp(14em, 10vw, 20vw);
+		background-color: #ECE9D8;
+		border: 1px solid #000;
+		padding: 4px;
+	}
+	button{
+		position: absolute;
+		top: 0;
+		right: 4px;
+		width: max(26px, 2vw);
+		height: max(26px, 2vw);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		background-color: transparent;
+		font-size: 0;
+		text-indent: -9999px;
+		&::after{
+			display: flex;
+			content: 'x';
+			font-size: max(26px, 2vw);
+			text-indent: 0;
+		}
+		&.active{
+			position: relative;
+			inset: 0;
+			width: min(50px, 8vw);
+			height: min(50px, 8vw);
+			background-color: #ECE9D8;
+			border: 1px solid #000;
+			&::after{
+				font-size: min(50px, 8vw);
+				content: '?';
+			}
+		}
+	}
+}

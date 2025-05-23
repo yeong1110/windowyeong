@@ -1,6 +1,6 @@
-/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/assets/css/reset.css ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./src/assets/scss/reset.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -10,27 +10,30 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 
 a {
@@ -38,33 +41,32 @@ a {
   color: #202020;
 }
 
-img{
-	display: block;
-	max-width: 100%;
+img {
+  display: block;
+  max-width: 100%;
 }
 
 button {
   border: none;
   outline: none;
-	background: none;
-	font-family: inherit;
-	cursor: pointer;
+  background: none;
+  font-family: inherit;
 }
 
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  content: "";
+  content: none;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./src/assets/scss/style.scss ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -80,7 +82,7 @@ table {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url("/images/cursor/cursor.svg"), auto;
+  cursor: url("/windowyeong/images/cursor/cursor.svg"), auto;
 }
 :root * {
   box-sizing: border-box;
@@ -98,7 +100,7 @@ a {
 
 a:hover {
   color: #535bf2;
-  cursor: url("/images/cursor/pointer.svg"), auto;
+  cursor: url("/windowyeong/images/cursor/pointer.svg"), auto;
 }
 
 body {
@@ -114,20 +116,48 @@ h1 {
   line-height: 1.1;
 }
 
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  -moz-appearance: none;
+       appearance: none;
+  font-family: inherit;
+  color: inherit;
+  border-radius: 0;
+}
+
 button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: clamp(14px, 0.825rem, 2vw);
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   transition: border-color 0.25s;
-  cursor: url("/images/cursor/pointer.svg"), auto;
+  cursor: url("/windowyeong/images/cursor/pointer.svg"), auto;
 }
 
 button:focus,
 button:focus-visible {
   outline: none;
+}
+
+input,
+textarea {
+  display: block;
+  padding: 9px 12px;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-width: 1px 0px 0px 1px;
+  border-style: solid;
+  border-color: #000000;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+textarea {
+  resize: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -144,19 +174,19 @@ button:focus-visible {
 }
 @font-face {
   font-family: "Freesentation";
-  src: url("/fonts/Freesentation-6SemiBold.woff2") format("woff2");
+  src: url("/windowyeong/fonts/Freesentation-6SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Freesentation";
-  src: url("/fonts/Freesentation-2ExtraLight.woff2") format("woff2");
+  src: url("/windowyeong/fonts/Freesentation-2ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "DungGeunMo";
-  src: url("/fonts/DungGeunMo.woff2") format("woff2");
+  src: url("/windowyeong/fonts/DungGeunMo.woff2") format("woff2");
 }
 body, code {
   font-family: "DungGeunMo", "Freesentation", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -173,7 +203,7 @@ body, code {
   left: 0;
   z-index: 100;
   pointer-events: none;
-  background: url("/images/cursor/sprite.png") no-repeat;
+  background: url("/windowyeong/images/cursor/sprite.png") no-repeat;
   image-rendering: pixelated; /* 픽셀 아트일 때 */
   transform: translate(-50%, -50%);
   transition: top, left 0.2s;
@@ -195,22 +225,28 @@ body, code {
   flex-grow: 0;
 }
 .wy__bottom__nav i[datatype=exe] {
-  background-image: url("/images/icon/14.ico");
+  background-image: url("/windowyeong/images/icon/14.ico");
 }
 .wy__bottom__nav i[datatype=folder] {
-  background-image: url("/images/icon/19.ico");
+  background-image: url("/windowyeong/images/icon/19.ico");
 }
 .wy__bottom__nav i[datatype=folioPop] {
-  background-image: url("/images/icon/1484.ico");
+  background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__bottom__nav i[datatype=mail] {
+  background-image: url("/windowyeong/images/icon/letter.png");
 }
 .wy__bottom__nav[datatype=exe] i {
-  background-image: url("/images/icon/14.ico");
+  background-image: url("/windowyeong/images/icon/14.ico");
 }
 .wy__bottom__nav[datatype=folder] i {
-  background-image: url("/images/icon/19.ico");
+  background-image: url("/windowyeong/images/icon/19.ico");
 }
 .wy__bottom__nav[datatype=folioPop] i {
-  background-image: url("/images/icon/1484.ico");
+  background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__bottom__nav[datatype=mail] i {
+  background-image: url("/windowyeong/images/icon/letter.png");
 }
 .wy__bottom__nav__start {
   display: flex;
@@ -219,7 +255,7 @@ body, code {
   padding: 4px 8px;
   width: 120px;
   height: 100%;
-  background: linear-gradient(90.13deg, rgba(17, 119, 18, 0.36) -0.65%, rgba(34, 173, 51, 0.36) 5.45%, rgba(28, 194, 29, 0.36) 95.76%, rgba(17, 119, 18, 0.36) 101.04%), linear-gradient(360deg, #22AD33 0%, #127C1F 18%, #178B4D 81%, #1CC21D 99.99%, #117712 100%);
+  background: linear-gradient(90.13deg, rgba(17, 119, 18, 0.36) -0.65%, rgba(34, 173, 51, 0.36) 5.45%, rgba(28, 194, 29, 0.36) 95.76%, rgba(17, 119, 18, 0.36) 101.04%), linear-gradient(360deg, #22ad33 0%, #127c1f 18%, #178b4d 81%, #1cc21d 99.99%, #117712 100%);
   color: white;
   border: 1px solid #117712;
   border-radius: 6px;
@@ -266,23 +302,149 @@ body, code {
   max-width: 70px;
   font-size: 14px;
   line-height: 1.4;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 0px 2px #000000;
   flex: none;
   flex-grow: 0;
 }
 .wy__desktop .wy__drag[datatype=exe] i {
-  background-image: url("/images/icon/14.ico");
+  background-image: url("/windowyeong/images/icon/14.ico");
 }
 .wy__desktop .wy__drag[datatype=folder] i {
-  background-image: url("/images/icon/19.ico");
+  background-image: url("/windowyeong/images/icon/19.ico");
 }
 .wy__desktop .wy__drag[datatype=folioPop] i {
-  background-image: url("/images/icon/1484.ico");
+  background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__desktop .wy__drag[datatype=mail] i {
+  background-image: url("/windowyeong/images/icon/letter.png");
 }
 .wy__desktop .wy__drag.click {
   background-color: #a0c5e8;
   opacity: 0.8;
+}
+
+.wy__nav__full {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+.wy__nav {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: min(466px, 94vw);
+  height: clamp(60vh, 80vh, 612px);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #00348c;
+  box-shadow: inset -2px 4px 4px #00348c;
+  border-radius: 6px 6px 0px 0px;
+}
+.wy__nav__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: linear-gradient(180deg, #8db8ff 0%, #0d60cc 8.34%, #1b71d4 35.28%, #4191ea 92.61%);
+  color: #fff;
+}
+.wy__nav__head__name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.wy__nav__head__name > div {
+  width: min(50px, 8vw);
+  height: min(50px, 8vw);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #fff;
+}
+.wy__nav__head__name > div img {
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+.wy__nav__content {
+  flex: 1 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+}
+@media screen and (max-width: 600px) {
+  .wy__nav__content {
+    grid-auto-flow: row;
+  }
+}
+.wy__nav__content > div {
+  padding: 10px;
+}
+.wy__nav__career__title {
+  font-size: clamp(20px, 4vw, 24px);
+  color: #005af2;
+  margin-top: 24px;
+}
+.wy__nav__career__title:first-of-type {
+  margin-top: 0;
+}
+.wy__nav__career__items {
+  margin-top: 10px;
+}
+.wy__nav__career__items li {
+  font-size: clamp(14px, 4vw, 16px);
+}
+.wy__nav__project {
+  background-color: #d3e5fb;
+}
+.wy__nav__project__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wy__nav__project__items li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: url("/windowyeong/images/cursor/pointer.svg"), auto;
+}
+.wy__nav__project__items li i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  flex: none;
+  flex-grow: 0;
+}
+.wy__nav__project__items li i[datatype=exe] {
+  background-image: url("/windowyeong/images/icon/14.ico");
+}
+.wy__nav__project__items li i[datatype=folder] {
+  background-image: url("/windowyeong/images/icon/19.ico");
+}
+.wy__nav__project__items li i[datatype=folioPop] {
+  background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__nav__project__items li i[datatype=mail] {
+  background-image: url("/windowyeong/images/icon/letter.png");
+}
+.wy__nav__project__items li[datatype=exe] i {
+  background-image: url("/windowyeong/images/icon/14.ico");
+}
+.wy__nav__project__items li[datatype=folder] i {
+  background-image: url("/windowyeong/images/icon/19.ico");
+}
+.wy__nav__project__items li[datatype=folioPop] i {
+  background-image: url("/windowyeong/images/icon/1484.ico");
+}
+.wy__nav__project__items li[datatype=mail] i {
+  background-image: url("/windowyeong/images/icon/letter.png");
+}
+.wy__nav__project__items li i {
+  background: url("/windowyeong/images/icon/1484.ico") center/contain no-repeat;
 }
 
 .wy__desktop {
@@ -298,18 +460,7 @@ body, code {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  border: 1px solid #00348C;
-  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25));
-  border-radius: 6px 6px 0px 0px;
-}
-.wy__pop__alert {
-  position: absolute;
-  width: 466px;
-  height: 172px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid #00348C;
+  border: 1px solid #00348c;
   filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25));
   border-radius: 6px 6px 0px 0px;
 }
@@ -320,7 +471,7 @@ body, code {
   gap: 1vw;
   width: 100%;
   height: 32px;
-  background: linear-gradient(180deg, #8DB8FF 0%, #005AF2 8.62%, #005AF2 61.01%, #00348C 129.81%);
+  background: linear-gradient(180deg, #8db8ff 0%, #005af2 8.62%, #005af2 61.01%, #00348c 129.81%);
   color: white;
 }
 .wy__pop__head p {
@@ -340,55 +491,35 @@ body, code {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(133.98deg, #DDEAFF -40.9%, #005AF2 57.87%, #00348C 110.68%);
-  box-shadow: inset -1px -1px 4px #00348C;
+  background: linear-gradient(133.98deg, #ddeaff -40.9%, #005af2 57.87%, #00348c 110.68%);
+  box-shadow: inset -1px -1px 4px #00348c;
   background-repeat: no-repeat;
   background-position: center;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 4px;
   font-size: 0;
   text-indent: -9999px;
 }
 .wy__pop__head ul li button.close {
-  background: url("/images/popup/close.svg"), radial-gradient(85% 85% at 50% 15%, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(129.48deg, rgba(242, 173, 151, 0.841667) 2.26%, rgba(234, 124, 89, 0.926697) 21.12%, #E35123 39.99%);
+  background: url("/windowyeong/images/popup/close.svg"), radial-gradient(85% 85% at 50% 15%, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(129.48deg, rgba(242, 173, 151, 0.841667) 2.26%, rgba(234, 124, 89, 0.926697) 21.12%, #e35123 39.99%);
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: inset -1px -1px 4px #7D2D13;
+  box-shadow: inset -1px -1px 4px #7d2d13;
 }
 .wy__pop__head ul li button.maximize {
-  background: url("/images/popup/maximize.svg"), linear-gradient(133.98deg, #DDEAFF -40.9%, #005AF2 57.87%, #00348C 110.68%);
+  background: url("/windowyeong/images/popup/maximize.svg"), linear-gradient(133.98deg, #ddeaff -40.9%, #005af2 57.87%, #00348c 110.68%);
   background-repeat: no-repeat;
   background-position: center;
 }
 .wy__pop__head ul li button.minimize {
-  background: url("/images/popup/minimize.svg"), linear-gradient(133.98deg, #DDEAFF -40.9%, #005AF2 57.87%, #00348C 110.68%);
+  background: url("/windowyeong/images/popup/minimize.svg"), linear-gradient(133.98deg, #ddeaff -40.9%, #005af2 57.87%, #00348c 110.68%);
   background-repeat: no-repeat;
   background-position: center;
 }
 .wy__pop__head ul li button.restore {
-  background: url("/images/popup/restore.svg"), linear-gradient(133.98deg, #DDEAFF -40.9%, #005AF2 57.87%, #00348C 110.68%);
+  background: url("/windowyeong/images/popup/restore.svg"), linear-gradient(133.98deg, #ddeaff -40.9%, #005af2 57.87%, #00348c 110.68%);
   background-repeat: no-repeat;
   background-position: center;
-}
-.wy__pop__alert__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  gap: 24px;
-  background: #ECE9D8;
-  border: 2px solid #005AF2;
-}
-.wy__pop__alert__container i {
-  flex-shrink: 0;
-}
-.wy__pop__alert__container i.alert {
-  display: block;
-  background-image: url("/images/popup/alert.svg");
-  width: 34px;
-  height: 36px;
-  background-position: center/contain;
-  background-repeat: no-repeat;
 }
 .wy__pop__container {
   flex: 1 1;
@@ -396,17 +527,14 @@ body, code {
   flex-direction: column;
   justify-content: center;
   background: #fff;
-  border: 2px solid #005AF2;
-}
-.wy__pop__alert__content {
-  display: flex;
-  align-items: start;
-  gap: 12px;
+  border: 2px solid #005af2;
+  overflow: hidden;
 }
 .wy__pop__content {
   height: 100%;
   display: flex;
   align-items: start;
+  justify-content: center;
   gap: 12px;
 }
 .wy__pop__btn {
@@ -422,7 +550,7 @@ body, code {
   padding: 4px;
   width: 78px;
   height: 24px;
-  background: #EEE7D9;
+  background: #eee7d9;
   border: 1px solid #243438;
   box-shadow: inset -3px -3px 2px rgba(0, 0, 0, 0.32);
 }
@@ -438,7 +566,172 @@ body, code {
   transform: translate(-50%, -50%);
   width: 90%;
   height: 68%;
-  border: 1px dashed #706D67;
+  border: 1px dashed #706d67;
+}
+
+.wy__pop__alert {
+  position: absolute;
+  width: min(466px, 70vw);
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #00348c;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25));
+  border-radius: 6px 6px 0px 0px;
+}
+.wy__pop__alert__container {
+  height: 100%;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 24px;
+  background: #ece9d8;
+  border: 2px solid #005af2;
+}
+.wy__pop__alert__container i {
+  flex-shrink: 0;
+}
+.wy__pop__alert__container i.alert {
+  display: block;
+  background-image: url("/windowyeong/images/popup/alert.svg");
+  width: 34px;
+  height: 36px;
+  background-position: center/contain;
+  background-repeat: no-repeat;
+}
+.wy__pop__alert__content {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+}
+
+.wy__introduce {
+  position: absolute;
+  bottom: 2vw;
+  right: 2vw;
+  text-wrap: balance;
+  word-break: break-all;
+}
+.wy__introduce__inner {
+  width: clamp(14em, 10vw, 20vw);
+  background-color: #ECE9D8;
+  border: 1px solid #000;
+  padding: 4px;
+}
+.wy__introduce button {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: max(26px, 2vw);
+  height: max(26px, 2vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.wy__introduce button::after {
+  display: flex;
+  content: "x";
+  font-size: max(26px, 2vw);
+  text-indent: 0;
+}
+.wy__introduce button.active {
+  position: relative;
+  inset: 0;
+  width: min(50px, 8vw);
+  height: min(50px, 8vw);
+  background-color: #ECE9D8;
+  border: 1px solid #000;
+}
+.wy__introduce button.active::after {
+  font-size: min(50px, 8vw);
+  content: "?";
+}
+
+.wy__visit {
+  padding: 8px 10px 40px 10px;
+  width: 100%;
+  max-width: 768px;
+  height: 100%;
+  overflow-y: auto;
+}
+.wy__visit__write {
+  padding: 8px 16px;
+  background: #e6e5e5;
+  border-width: 1px 0px 0px 1px;
+  border-style: solid;
+  border-color: #ffffff;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+.wy__visit__input__wrap {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 26px;
+}
+.wy__visit__input__wrap input {
+  width: 100px;
+}
+.wy__visit__textarea__wrap {
+  margin-top: 9px;
+  height: clamp(84px, 20vh, 120px);
+}
+.wy__visit__button__wrap {
+  margin-top: 11px;
+  display: flex;
+  justify-content: center;
+}
+.wy__visit__button__wrap button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  width: 78px;
+  height: 24px;
+  background: #eee7d9;
+  border: 1px solid #243438;
+  box-shadow: inset -3px -3px 2px rgba(0, 0, 0, 0.32);
+}
+.wy__visit__button__wrap button:focus, .wy__visit__button__wrap button:focus-visible {
+  border: 1px solid #243438;
+}
+.wy__visit__button__wrap button:focus::before, .wy__visit__button__wrap button:focus-visible::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 68%;
+  border: 1px dashed #706d67;
+}
+.wy__visit__lists {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.wy__visit__list {
+  border-top: 1px solid #000000;
+}
+.wy__visit__list > div {
+  padding: 10px;
+}
+.wy__visit__list__top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #E6E5E5;
+}
+.wy__visit__list__bottom {
+  background-color: #F5F5F5;
 }
 
 .wy__land {
@@ -450,7 +743,7 @@ body, code {
   justify-content: center;
   color: white;
   box-sizing: border-box;
-  background: url("/images/landing/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
+  background: url("/windowyeong/images/landing/noise3.png"), linear-gradient(180deg, #111111 76.9%, #2C4579 125.79%);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
@@ -466,7 +759,7 @@ body, code {
   height: 36px;
   border: 1px solid #d9d9d9;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: url("/images/landing/landing_progress.svg");
+  background-image: url("/windowyeong/images/landing/landing_progress.svg");
   background-repeat: no-repeat;
   background-position-y: 6px;
   animation: runProgress 3s linear infinite;
@@ -484,6 +777,6 @@ body, code {
   height: 100dvh;
   display: grid;
   grid-template-rows: 1fr 40px;
-  background: url("/images/noise.png"), url("/images/land.jpg");
+  background: url("/windowyeong/images/noise.png"), url("/windowyeong/images/land.jpg");
   background-size: cover;
 }

@@ -12,9 +12,16 @@ dist-ssr
 *.local
 
 .next
+/.next/
+/out/
 next-env.d.ts
+*.tsbuildinfo
+.pnp.js
+.env*.local
+.vercel
 
 # Editor directories and files
+.git
 .vscode/*
 !.vscode/extensions.json
 .idea
